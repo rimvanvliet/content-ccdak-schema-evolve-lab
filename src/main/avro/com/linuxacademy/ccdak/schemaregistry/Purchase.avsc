@@ -1,5 +1,6 @@
 {
   "namespace": "com.linuxacademy.ccdak.schemaregistry",
+  "compatibility": "FORWARD",
   "type": "record",
   "name": "Purchase",
   "fields": [
