@@ -6,6 +6,7 @@
   "fields": [
     {"name": "id", "type": "int"},
     {"name": "product", "type": "string"},
-    {"name": "quantity", "type": "int"}
+    {"name": "quantity", "type": "int"},
+    {"name": "member_id", "type": "int", "default": ""}
   ]
 }
