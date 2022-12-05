@@ -18,15 +18,15 @@ public class ProducerMain {
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class);
         props.put(AbstractKafkaAvroSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, "http://localhost:8081");
-        
+
         KafkaProducer<String, Purchase> producer = new KafkaProducer<String, Purchase>(props);
-        
-        Purchase apples = new Purchase(1, "apples", 17, 77543);
+
+        Purchase apples = new Purchase(1, "apples", 17);
         producer.send(new ProducerRecord<String, Purchase>("inventory_purchases", apples.getId().toString(), apples));
-        
-        Purchase oranges = new Purchase(2, "oranges", 5, 56878);
+
+        Purchase oranges = new Purchase(2, "oranges", 5);
         producer.send(new ProducerRecord<String, Purchase>("inventory_purchases", oranges.getId().toString(), oranges));
-        
+
         producer.close();
     }
 

@@ -33,7 +33,7 @@ public class ConsumerMain {
         consumer.subscribe(Collections.singletonList("inventory_purchases"));
         
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("/home/cloud_user/output/output.txt", true));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("/Users/ruud/Trivento/KPN/confluent/output/output.txt", true));
             while (true) {
                 final ConsumerRecords<String, Purchase> records = consumer.poll(Duration.ofMillis(100));
                 for (final ConsumerRecord<String, Purchase> record : records) {
