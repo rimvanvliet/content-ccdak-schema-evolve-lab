@@ -1,12 +1,12 @@
 {
   "namespace": "com.linuxacademy.ccdak.schemaregistry",
-  "compatibility": "BACKWARDS",
+  "compatibility": "BACKWARD",
   "type": "record",
   "name": "Purchase",
   "fields": [
     {"name": "id", "type": "int"},
     {"name": "product", "type": "string"},
     {"name": "quantity", "type": "int"},
-    {"name": "member_id", "type": "int", "default": ""}
+    {"name": "member_id", "type": "int", "default": 0}
   ]
 }
