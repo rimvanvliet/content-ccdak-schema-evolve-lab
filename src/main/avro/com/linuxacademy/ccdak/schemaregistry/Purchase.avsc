@@ -1,6 +1,6 @@
 {
   "namespace": "com.linuxacademy.ccdak.schemaregistry",
-  "compatibility": "BACKWARDS",
+  "compatibility": "BACKWARD",
   "type": "record",
   "name": "Purchase",
   "fields": [
